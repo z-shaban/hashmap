@@ -19,5 +19,8 @@ test.set('moon', 'silver')
 test.get("moon");
 test.has("him")
 
+test.length();
+test.clear();
+
 
 /*console.log(test.buckets)*/

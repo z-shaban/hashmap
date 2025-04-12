@@ -50,9 +50,46 @@
                 console.log('it does')
             }
             i++
-        }console.log("it doesnt")
+        }console.log("it doesnt")}
+
+        remove(key){
+            const index = this.hash(key);
+            const bucket= this.buckets[index]
+
+            if(!bucket) return null;
+
+            let i=0;
+            while(i<bucket.length){
+                if(bucket[i][0]== key){
+                    bucket.splice(bucket[i],1)
+                }
+                i++
+            }
+            console.log(this.buckets)
+        }
     
+        
+        length(){
+            let size = 0
+            let bucket = this.buckets;
+ 
+            for(let i = 0; i<bucket.length;i++){
+             if(bucket[i]){
+               
+                 for(let j=0; j< this.buckets[i].length;j++){
+                     size++
+                 }
+             
+            }
+            
+          }console.log(size)
       
-}}
+}
+clear(){
+    this.buckets.splice(0)
+    console.log(this.buckets);
+}
+
+}
 
 module.exports = { HashMap };
