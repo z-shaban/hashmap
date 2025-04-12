@@ -20,7 +20,9 @@ test.get("moon");
 test.has("him")
 
 test.length();
-test.clear();
+test.keys();
+test.values();
+test.entries();
 
 
 /*console.log(test.buckets)*/

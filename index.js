@@ -90,6 +90,53 @@ clear(){
     console.log(this.buckets);
 }
 
+keys(){
+    let myKeys =[];
+    let bucket = this.buckets;
+    
+    for(let i = 0; i<bucket.length;i++){
+        if(bucket[i]){
+          
+            for(let j=0; j< this.buckets[i].length;j++){
+                myKeys.push(this.buckets[i][j][0])
+            }
+        
+       }
+       
+     }console.log(myKeys)
+}
+
+values(){
+    let myValues =[];
+    let bucket = this.buckets;
+    
+    for(let i = 0; i<bucket.length;i++){
+        if(bucket[i]){
+          
+            for(let j=0; j< this.buckets[i].length;j++){
+                myValues.push(this.buckets[i][j][1])
+            }
+        
+       }
+       
+     }console.log(myValues)
+}
+
+entries(){
+    let myEntries =[];
+    let bucket = this.buckets;
+    
+    for(let i = 0; i<bucket.length;i++){
+        if(bucket[i]){
+          
+            for(let j=0; j< this.buckets[i].length;j++){
+                myEntries.push(this.buckets[i][j])
+            }
+        
+       }
+       
+     }console.log(myEntries)
+}
 }
 
 module.exports = { HashMap };
